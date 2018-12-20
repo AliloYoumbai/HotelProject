@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="741.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.ControlerCategorie">
+   <children>
+      <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="588.0" prefWidth="740.0">
+         <children>
+            <TableView fx:id="Table_cat" layoutX="2.0" layoutY="1.0" onMouseClicked="#showCat" prefHeight="420.0" prefWidth="740.0">
+              <columns>
+                <TableColumn fx:id="codeCate" prefWidth="251.0" text="Code " />
+                <TableColumn fx:id="descCat" prefWidth="488.0" text="Description" />
+              </columns>
+            </TableView>
+            <Pane layoutX="3.0" layoutY="425.0" prefHeight="162.0" prefWidth="740.0">
+               <children>
+                  <HBox layoutX="530.0" layoutY="112.0" prefHeight="14.0" prefWidth="196.0">
+                     <children>
+                        <JFXButton fx:id="AddCat" buttonType="RAISED" onAction="#AddCat" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: Green;" text="Add" textFill="#fffefe">
+                           <font>
+                              <Font name="Gloucester MT Extra Condensed" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="EditCat" buttonType="RAISED" onAction="#EditCat" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: Orange;" text="Edit" textFill="#fffefe">
+                           <font>
+                              <Font name="Gloucester MT Extra Condensed" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="DeleteCat" buttonType="RAISED" onAction="#DeleteCat" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: #e43e3e;" text="Delete" textFill="#fffefe">
+                           <font>
+                              <Font name="Gloucester MT Extra Condensed" size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <Label layoutX="23.0" layoutY="102.0" prefHeight="50.0" prefWidth="214.0" text="Gestion Categorie" textFill="#9a7474">
+                     <font>
+                        <Font name="Likhan" size="28.0" />
+                     </font></Label>
+                  <JFXTextField fx:id="AddDesc" layoutX="32.0" layoutY="38.0" prefHeight="29.0" prefWidth="253.0" promptText="Description Categorie" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
